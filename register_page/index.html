@@ -1,40 +1,81 @@
 <!DOCTYPE html>
- <html lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Notepad | Register</title>
+    <title>PhoneBook | Register</title>
     <link rel="stylesheet" href="styleSheet.css">
+    <link rel="icon" href="R.png">
 </head>
-
 <body>
+<section>
 <div>
     <div>
-        <img src="new%20Background.jpeg" width="1920" height="948">
         <div>
-            <img class="registerMenu" src="white%20background.jpeg" width="600" height="600">
-            <img class="registerMenuImage" src="OIP.jpeg" alt="image" width="400" height="450">
+            <img src="new%20Background.jpeg" width="1920" height="948">
         </div>
-        <form action="#" id="form" >
-        <div class="notepadInput">
-            <p>UpTree Notepad</p>
-            <p class="email">Email Address</p>
-            <input id="emailInput" type="email" placeholder="Enter your email" required>
-            <p class="password"> Password</p>
-            <input id="passwordInput" type="password" placeholder="Enter your password" required>
+        <img class="whiteBackground" src="white%20background.jpeg" width="50" height="900">
+
+        <div>
         </div>
-            <div class="loginFooter" >
-                <p> Already have an account ? <a href="#"><span style="text-decoration: none">Sign Up</span></a></p>
-                <button class="submit" >Log In</button>
+            <div class="heroImage">
+            <h1 class="header">LET'S SAVE YOUR CONTACT</h1>
             </div>
-        </form>
+
     </div>
-    <div class="copyright">
-        <p>UpTree Group</p>
-        <img src="images%20(3).png" width="30" height="30">
-        <p>Semicolon</p>
-        <img src="semicolon.jpg" width="30" height="30">
-    </div>
+
 </div>
+</section>
+<section>
+    <form action="#" id="form">
+    <div class="inputBox">
+        <p class="firstNameHeader">First Name</p>
+        <label>
+        <input id="firstNameInputBox" type="text" name="first name" placeholder="Enter your first name" required>
+        </label>
+        <label>
+        <p class="lastNameHeader">Last Name</p>
+        <input id="lastNameInputBox" type="text" name="last name" placeholder="Enter your last name" required>
+        </label>
+        <label>
+        <p class="emailHeader">Email</p>
+        <input id="emailInputBox" type="email" name="email" placeholder="Enter your email" required>
+            <p id="emailError" class="error-message"></p>
+        </label>
+        <label>
+        <p class="passwordHeader">Password</p>
+        <input id="passwordInputBox" type="password" name="password" placeholder="Enter a password" required>
+        </label>
+        <label>
+            <p class="phoneNumberHeader">Phone Number</p>
+            <input id="phoneNumberInputBox" type="text" name="phone number" placeholder="Enter your phone number" required>
+            <p id="phoneNumberError" class="error-message"></p>
+        </label>
+    </div>
+        <button class="submitButton">Submit</button>
+    </form>
+</section>
+<section>
+    <div class="signInButtons">
+        <button class="googleSignInButton">Sign in with Google</button>
+        <button class="x_signInButton">Sign in with X</button>
+        <button class="facebookSignInButton">Sign in with Facebook</button>
+        <button class="appleSignInButton">Sign in with Apple</button>
+    </div>
+</section>
+<section>
+    <div class="googleIcon">
+    <img width="48" height="48" src="https://img.icons8.com/color/48/google-logo.png" alt="google-logo"/>
+    </div>
+    <div class="twitterIcon">
+        <img width="50" height="50" src="https://img.icons8.com/ios/50/twitterx--v2.png" alt="twitterx--v2"/>
+    </div>
+    <div class="facebookIcon">
+        <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/facebook-new.png" alt="facebook-new"/>
+    </div>
+    <div class="appleIcon">
+        <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/mac-os.png" alt="mac-os"/>
+    </div>
+</section>
+<script src="script.js"></script>
 </body>
-<script src="script.js" ></script>
 </html>

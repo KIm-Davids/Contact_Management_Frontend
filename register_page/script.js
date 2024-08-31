@@ -1,33 +1,47 @@
-const form = document.querySelector("#form")
+let form = document.getElementById('form')
 
-form.addEventListener('submit', async (e) => {
-    e.preventDefault();
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
 
-    const email = document.getElementById("emailInput")
-    const password = document.getElementById("passwordInput")
+    const formData = new FormData(document.getElementById('form'))
+    const firstName = document.getElementById('firstNameInputBox').value
+    const lastName = document.getElementById('phoneNumberInputBox').value
+    const email = document.getElementById('emailInputBox').value
+    const phoneNumber = document.getElementById('phoneNumberInputBox').value
+    const emailError = document.getElementById('emailError')
+    const phoneNumberError = document.getElementById('phoneNumberError')
 
-    try{
-        console.log("one")
-        const response  = await fetch("http://localhost:8089/login/notepad/login-user",
-            {
-                method: "PATCH",
-                headers: {
-                    "content-type" : "application/json"
-                },
-                body:JSON.stringify({email:email, password:password})
-            })
-        console.log("Two")
-        if(response.ok){
-            const result = await response.text();
-            alert('success')
-            console.log(result)
-        }else{
-            const err = await response.text();
-            alert(err)
-            console.log(err)
-        }
-    }catch(error){
-        alert(error.message)
+
+    if(!firstName || !lastName || !email || !phoneNumber ){
+        console.error("Empty fields, Please fill them in !")
     }
 
+    emailError.textContent = "";
+    if(!email.includes('@') | !email.includes('.com')){
+        emailError.textContent = 'Invalid email format, Please include "@" and "."';
+    }
+
+    if(email === " "){
+        emailError.textContent ="Please fill out this field"
+    }
+
+    phoneNumberError.textContent = "";
+    if(phoneNumber.length < 11 || phoneNumberError.length > 11){
+        phoneNumberError.textContent = "Incorrect Phone number"
+    }
+
+    try {
+        fetch('http://localhost/register', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+            })
+
+
+    } catch (error) {
+        console.log(error)
+    }
 })
