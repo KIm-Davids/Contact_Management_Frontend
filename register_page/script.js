@@ -1,6 +1,6 @@
 let form = document.getElementById('form')
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
     e.preventDefault()
 
     const formData = new FormData(document.getElementById('form'))
@@ -17,7 +17,7 @@ form.addEventListener('submit', (e) => {
     }
 
     emailError.textContent = "";
-    if(!email.includes('@') | !email.includes('.com')){
+    if(!email.includes('@') || !email.includes('.com')){
         emailError.textContent = 'Invalid email format, Please include "@" and "."';
     }
 
@@ -31,17 +31,16 @@ form.addEventListener('submit', (e) => {
     }
 
     try {
-        fetch('http://localhost/register', {
+        const response = await fetch('http://localhost/register', {
             method: 'POST',
             body: formData
         })
-            .then(response => response.json())
-            .then(data => {
-                console.log(data)
-            })
-
-
+            if(response.ok) {
+                alert(response)
+                window.location.href = "../login_page/index.html"
+            }
     } catch (error) {
+        alert(error)
         console.log(error)
     }
 })

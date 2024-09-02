@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*min-width: 100vh;*/
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: Inter, sans-serif;
+    background: linear-gradient(to right, deepskyblue 40%, purple 100%);
+}
+
+.container{
+    width: 680px;
+    /*margin-top: -25rem;*/
+}
+
+.entry_area{
+    position: relative;
+    height: 80px;
+    background-color: white;
+    line-height: 80px;
+}
+
+.entry_area_last_name{
+    margin-top: 3rem;
+    position: relative;
+    height: 80px;
+    background-color: white;
+    line-height: 80px;
+}
+
+.entry_area_email{
+    margin-top: 3rem;
+    position: relative;
+    height: 80px;
+    background-color: white;
+    line-height: 80px;
+}
+
+.entry_area_phone_number{
+    margin-top: 3rem;
+    position: relative;
+    height: 80px;
+    background-color: white;
+    line-height: 80px;
+}
+
+input{
+    position: absolute;
+    width: 100%;
+    outline: none;
+    font-size: 2.2rem;
+    padding: 0 30px;
+    line-height: 80px;
+    border-radius: 10px;
+    border: 2px solid #01BEFE;
+    background: transparent;
+    transition: 0.1s ease;
+    z-index: 1111
+}
+
+.first_name{
+    position: absolute;
+    font-size: 1.6rem;
+    /*color: black;*/
+    padding: 0 25px;
+    margin: 0 20px;
+    background-color: white ;
+    transition: 0.2s ease;
+}
+
+input:focus,
+input:valid{
+    color: #01BEFE;
+    border: 4px solid #01BEFE;
+}
+
+input:focus + .first_name,
+input:valid + .first_name{
+    color: #01BEFE;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 12px;
+    transform: translate(-15px, -16px) scale(0.88);
+    z-index: 1111;
+}
+
+.submitButton{
+    margin-top: 9rem;
+    flex-direction: row;
+    width: 40rem;
+    padding: 15px 10px;
+    background: rgb(214, 214, 214);
+    border: none;
+    border-radius: 25px;
+    color: rgb(50, 207,207);
+    font-size: 15px;
+    font-weight: bold;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    7px 7px 20px 0 rgba(0, 0, 0, 0.2)
+}
+
+.submitButton:hover{
+    box-shadow: inset -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    7px 7px 20px 0 rgba(0, 0, 0, 0.2)
+
+}

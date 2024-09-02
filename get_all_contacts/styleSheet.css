@@ -1,0 +1,185 @@
+*{
+    padding: 0;
+    margin: 0;
+    max-height: 100vh;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Inter, sans-serif;
+    background: linear-gradient(to right, purple, deepskyblue);
+
+}
+
+.backgroundBox{
+    margin-left: 65rem;
+    margin-top: 3rem;
+    /*margin-bottom: 3rem;*/
+}
+
+.backgroundBoxInterface{
+    border-radius: 12px;
+    /*background-color: whitesmoke;*/
+}
+
+.backgroundImage{
+    margin-bottom: -39rem;:
+}
+
+.heroText{
+    margin-bottom: -5rem;
+    margin-left: 73rem;
+    margin-top: -55rem;
+    font-size: 2rem;
+}
+
+.createContactButton{
+    margin-left: 45rem;
+    margin-top: 30rem;
+    flex-direction: row;
+    width: 40rem;
+    padding: 15px 10px;
+    background: rgb(214, 214, 214);
+    border: none;
+    border-radius: 25px;
+    color: rgb(50, 207,207);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    7px 7px 20px 0 rgba(0, 0, 0, 0.2)
+}
+
+.createContactButton:hover{
+    box-shadow: inset -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    7px 7px 20px 0 rgba(0, 0, 0, 0.2)
+}
+
+.updateContactButton{
+    margin-left: 70rem;
+    margin-top: 5rem;
+    flex-direction: column;
+    width: 40rem;
+    padding: 15px 10px;
+    background: rgb(214, 214, 214);
+    border: none;
+    border-radius: 25px;
+    color: rgb(50, 207,207);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    7px 7px 20px 0 rgba(0, 0, 0, 0.2)
+}
+
+.updateContactButton:hover{
+    box-shadow: inset -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    7px 7px 20px 0 rgba(0, 0, 0, 0.2)
+}
+
+.deleteContactButton{
+    margin-left: 70rem;
+    margin-top: 5rem;
+    flex-direction: column;
+    width: 40rem;
+    padding: 15px 10px;
+    background: rgb(214, 214, 214);
+    border: none;
+    border-radius: 25px;
+    color: rgb(50, 207,207);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    7px 7px 20px 0 rgba(0, 0, 0, 0.2)
+}
+
+.deleteContactButton:hover{
+    box-shadow: inset -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    7px 7px 20px 0 rgba(0, 0, 0, 0.2)
+}
+
+.deleteAllContactsButton{
+    margin-left: 70rem;
+    margin-top: 5rem;
+    flex-direction: column;
+    width: 40rem;
+    padding: 15px 10px;
+    background: rgb(214, 214, 214);
+    border: none;
+    border-radius: 25px;
+    color: rgb(50, 207,207);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    7px 7px 20px 0 rgba(0, 0, 0, 0.2)
+}
+
+.deleteAllContactsButton:hover{
+    box-shadow: inset -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    7px 7px 20px 0 rgba(0, 0, 0, 0.2)
+}
+
+.getAllContacts{
+    margin-left: 70rem;
+    margin-top: 5rem;
+    flex-direction: column;
+    width: 40rem;
+    padding: 15px 10px;
+    background: rgb(214, 214, 214);
+    border: none;
+    border-radius: 25px;
+    color: rgb(50, 207,207);
+    font-size: 15px;
+    cursor: pointer;
+
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    7px 7px 20px 0 rgba(0, 0, 0, 0.2)
+}
+
+.getAllContacts:hover{
+    box-shadow: inset -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    7px 7px 20px 0 rgba(0, 0, 0, 0.2)
+}
+
+.log_out{
+    margin-left: 70rem;
+    margin-top: 5rem;
+    flex-direction: column;
+    width: 40rem;
+    padding: 15px 10px;
+    background: rgb(214, 214, 214);
+    border: none;
+    border-radius: 25px;
+    color: rgb(50, 207,207);
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    7px 7px 20px 0 rgba(0, 0, 0, 0.2)
+}
+
+.log_out:hover{
+    box-shadow: inset -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    7px 7px 20px 0 rgba(0, 0, 0, 0.2)
+}
+
