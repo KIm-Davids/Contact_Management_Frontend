@@ -9,8 +9,8 @@ createContactButton.addEventListener('click', async (e) => {
         })
         if (response.ok) {
             alert("Retrieved all contacts")
-            console.log(response.text())
-            const contacts = await response.json()
+            const data = await response.json()
+            const contacts = data.contacts;
             displayContacts(contacts)
         }
     }catch(error){
@@ -19,19 +19,19 @@ createContactButton.addEventListener('click', async (e) => {
 })
 
 function displayContacts(contacts){
-    contactsContainer.innerHmtl = '' ;
+    contactsContainer.innerHTML = '' ;
 
     contacts.forEach(contact => {
-        const contactElement = document.createElement('div')
+        const [firstName, lastName, email, phoneNumber] = contact
+        const contactElement = document.createElement('div');
         contactElement.classList.add('contact');
 
         contactElement.innerHTML = `
-        <p>First Name: ${contact.first_name}</p>
-        <p>Last Name: ${contact.last_name}</p>
-        <p>Email: ${contact.email}</p>
-        <p>Phone Number: ${contact.phone_number}</p>
+        <p>First Name: ${firstName}</p>
+        <p>Last Name: ${lastName}</p>
+        <p>Email: ${email}</p>
+        <p>Phone Number: ${phoneNumber}</p>
         `
-
-        contactsContainer.append(contactElement)
+        contactsContainer.appendChild(contactElement)
     })
 }
